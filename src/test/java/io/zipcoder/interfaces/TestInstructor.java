@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class TestInstructor {
     Instructor testInstructor = new Instructor(0L, "Dave");
-    Student testStudent = new Student(0L,"Evad")
+    Student testStudent = new Student(0L,"Evad");
 
     @Test
     public void testImplementation(){
