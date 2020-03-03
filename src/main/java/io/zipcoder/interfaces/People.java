@@ -53,7 +53,7 @@ public class People<E> implements Iterable<E>{
 
     @Override
     public Iterator<E> iterator() {
-        return null;
+        return (Iterator<E>) personList.iterator();
     }
 
     @Override
