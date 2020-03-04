@@ -23,4 +23,10 @@ public class TestPeople {
         Assert.assertTrue(newPeople.personList.isEmpty());
     }
 
+    @Test
+    public void testFindByID(){
+        newPeople.add(newPerson);
+        Assert.assertEquals(newPerson, newPeople.findById(0L));
+    }
+
 }

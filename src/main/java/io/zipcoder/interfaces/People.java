@@ -9,7 +9,7 @@ public class People<E> implements Iterable<E>{
     ArrayList<Person> personList = new ArrayList<>();
 
     public void add(Person person){
-        this.personList.add(person);
+        personList.add(person);
     }
 
     public Person findById(Long id){
