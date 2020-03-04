@@ -15,6 +15,6 @@ public final class Instructors extends People<Instructor>{
 
     @Override
     public Instructor[] getArray() {
-        return (Instructor[]) getInstance().personList.toArray();
+        return getInstance().personList.toArray(new Instructor[0]);
     }
 }

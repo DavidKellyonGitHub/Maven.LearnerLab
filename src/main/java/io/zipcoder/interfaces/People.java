@@ -22,11 +22,11 @@ public abstract class People<E extends Person> implements Iterable<E>{
         return null;
     }
 
-    public boolean contains(Person person){
+    public boolean contains(E person){
         return personList.contains(person);
     }
 
-    public void remove(Person person){
+    public void remove(E person){
         personList.remove(person);
     }
 

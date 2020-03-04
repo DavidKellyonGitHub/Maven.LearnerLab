@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class EducatorTest {
-    Instructor dolio;
+    Educator dolio = Educator.dolio;
     Student testStudent = new Student(11L, "Oilod");
     Learner[] learners = new Learner[]{testStudent};
 

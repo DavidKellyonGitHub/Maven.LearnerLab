@@ -1,43 +1,19 @@
 package io.zipcoder.interfaces;
 
 public enum Educator implements Teacher {
-    ;
-    enum instructorName{
-        dolio, chris, nobles, roberto, froilan
-    }
 
-    Instructor instructor;
-    double timeWorked;
+    dolio(6L, "Dolio"),
+    chris(10L, "Chris"),
+    nobles(9L, "Nobles"),
+    roberto(8L, "Roberto"),
+    froilan(7L, "Froilan");
 
-    Instructor dolio(){
-        instructor = Instructors.getInstance().findById(6L);
-        Instructors.getInstance().add(instructor);
-        return instructor;
-    }
+    final Instructor instructor;
+    private double timeWorked = 0;
 
-    Instructor froilan(){
-        instructor = Instructors.getInstance().findById(7L);
-        Instructors.getInstance().add(instructor);
-        return instructor;
-    }
-
-    Instructor roberto(){
-        instructor = Instructors.getInstance().findById((8L));
-        Instructors.getInstance().add(instructor);
-        return instructor;
-
-    }
-
-    Instructor nobles(){
-        instructor = Instructors.getInstance().findById(9L);
-        Instructors.getInstance().add(instructor);
-        return instructor;
-    }
-
-    Instructor chris(){
-         instructor = Instructors.getInstance().findById(10L);
-        Instructors.getInstance().add(instructor);
-         return instructor;
+    Educator(long id, String name){
+        this.instructor = new Instructor(id,name);
+        Instructors.getInstance().add(this.instructor);
     }
 
     @Override
