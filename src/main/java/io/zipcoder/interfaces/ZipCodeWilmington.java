@@ -5,10 +5,10 @@ Students students = Students.getInstance();
 Instructors instructors = Instructors.getInstance();
 
 public void hostLecture (Teacher teacher, double numberOfHours){
-    teacher.lecture((Learner[]) students.personList.toArray(), numberOfHours);
+    teacher.lecture(students.getArray(), numberOfHours);
 }
 public void hostLecture(long id, double numberOfHours){
-    hostLecture((Instructor) instructors.findById(id), numberOfHours);
+    hostLecture(instructors.findById(id), numberOfHours);
 }
 
 }

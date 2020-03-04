@@ -5,15 +5,16 @@ import java.util.Iterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
-public class People<E> implements Iterable<E>{
-    ArrayList<Person> personList = new ArrayList<>();
+public abstract class People<E extends Person> implements Iterable<E>{
+    ArrayList<E> personList = new ArrayList<>();
 
-    public void add(Person person){
+
+    public void add(E person){
         personList.add(person);
     }
 
-    public Person findById(Long id){
-        for(Person person : personList){
+    public E findById(Long id){
+        for(E person : personList){
             if (person.getId() == id){
                 return person;
             }
@@ -41,15 +42,7 @@ public class People<E> implements Iterable<E>{
         return personList.size();
     }
 
-    public Person[] toArray(){
-        Person[] result = new Person[personList.size()];
-        int i = 0;
-        for(Person person : personList){
-            result[i] = person;
-            i++;
-        }
-        return result;
-    }
+    public abstract E[] getArray();
 
     @Override
     public Iterator<E> iterator() {
